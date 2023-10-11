@@ -8,13 +8,29 @@ base('256').select({
 
 
     records.forEach(function(record) {
-        console.log(record.get('Images')[0]);
+        // console.log(record.get('Images')[0]);
         // document.querySelector('#big').
 
         let image = document.createElement("img");
-	      image.classList.add("img");
-	      image.src = record.get('Images')[0].url;
-	      document.querySelector("#big").append(image);
+	    image.classList.add("img");
+	    image.src = record.get('Images')[0].url;
+	    document.querySelector("#big").append(image);
+
+        let num = record.get('Images')[0].filename;
+        let numDisplay = document.getElementById("texts");
+        // numDisplay.style.display = "none";
+        
+        image.addEventListener(
+            "mouseenter",
+
+            (event) => {
+                // event.target.numDisplay.style.display = "block";
+                console.log(num);
+                numDisplay.innerHTML = num;
+            }
+
+
+        )
     });
 
     fetchNextPage();
