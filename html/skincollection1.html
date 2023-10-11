@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>1</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href=""> -->
+        <style>
+            body{
+                margin:0;
+                background-color: black;
+            }
+
+            .bigCon{
+                display: flex;
+                flex-direction: row;
+                width: 100vw;
+            }
+
+            .column{
+                display: flex;
+                flex-direction: column;
+                /* width: 100vw/3; */
+            }
+
+            .column img{
+                width: 33vw;
+                height: 50vh;
+                object-fit: cover;
+            }
+
+            img{
+                filter: blur(10px);
+                border-radius: 20px;
+                transition: filter 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+                mix-blend-mode: difference;
+            }
+
+            img:hover{
+                filter: blur(0px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bigCon">
+            <div class="column">
+                <img src="../assets/IMG_0192.JPG">
+                <img src="../assets/IMG_0240.JPG">
+                <img src="../assets/IMG_0246.JPG">
+                <img src="../assets/IMG_0301.JPG">
+                <img src="../assets/IMG_0335.JPG">
+            </div>
+
+            <div class="column">
+                <img src="../assets/IMG_0339.JPG">
+                <img src="../assets/IMG_0351.JPG">
+                <img src="../assets/IMG_0360.JPG">
+                <img src="../assets/IMG_0366.JPG">
+                <img src="../assets/IMG_0410.JPG">
+            </div>
+            
+            <div class="column">
+                <img src="../assets/IMG_0411.JPG">
+                <img src="../assets/IMG_0427.JPG">
+                <img src="../assets/IMG_0478.JPG">
+                <img src="../assets/IMG_0480.JPG">
+                <img src="../assets/IMG_0516.PNG">
+            </div>
+
+            <!-- <div id="text">
+                skin skin skin
+            </div> -->
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>

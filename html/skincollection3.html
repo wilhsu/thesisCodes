@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>3</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href=""> -->
+        <style>
+            body{
+                margin:0;
+            }
+
+            .bigCon{
+                display: flex;
+                flex-direction: row;
+                width: 100vw;
+                margin: 0;
+                top: 0;
+            }
+
+            #imgCon{
+                margin: 0;
+                top: 0;
+            }
+
+            .column{
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                top: 0;
+                /* width: 100vw/3; */
+            }
+
+            img{
+                width: 10vw;
+                height: 200px;
+                margin: 0;
+                top: -10px;
+                /* margin: 5px; */
+                object-fit: cover;
+                /* opacity: .8; */
+                /* border-radius: 5px; */
+                /* box-shadow: 0 0 10px 10px hsl(0, 100%, 50%); */
+                
+                /* opacity: .5; */
+            }
+
+            /* img:hover{
+                border-radius: 50px;
+            } */
+        </style>
+    </head>
+    <body>
+        <div class="bigCon">
+            <div id="imgCon">
+            </div>
+        </div>
+
+        <script>
+            // let apiURL = 'https://api.airtable.com/v0/appY3hITnlFZgs6DH/tblb85lWYZDPksPv2?api_key=keyRsJYzEsQrpUF9n';
+            // let apiData;
+            var Airtable = require('airtable');
+            Airtable.configure({
+                endpointUrl: 'https://api.airtable.com',
+                apiKey: 'cdc5e7573584351e0be2bbde902402dc50c47847a7d859af4071325c18a2f81b'
+            });
+            var base = Airtable.base('app2jiKwvykQ53cAK');
+
+            console.log(Airtable);
+
+            // var bCheckEnabled = true;
+            // var bFinishCheck = false;
+
+            // var img;
+            // var imgArray = new Array();
+            // var i = 0;
+
+            // var myInterval = setInterval(loadImage, 1);
+
+            // function loadImage() {
+
+            //     if (bFinishCheck) {
+            //         clearInterval(myInterval);
+            //         // alert('.·:*¨Loaded ' + i + ' images!¨*:·.');
+            //         return;
+            //     }
+
+            //     if (bCheckEnabled) {
+
+            //         bCheckEnabled = false;
+
+            //         // img = new Image();
+            //         img = document.createElement("img");
+            //         img.classList.add("images");
+            //         img.onload = fExists;
+            //         img.onerror = fDoesntExist;
+            //         img.src = '../assets/' + i + '.jpg';
+            //         imgArray.push(img);
+
+            //         randColor = Math.floor(Math.random() * 361);
+            //         document.getElementById('imgCon').append(img);
+            //     }
+            // }
+
+            // function fExists() {
+            //     imgArray.push(img);
+            //     i++;
+            //     bCheckEnabled = true;
+            // }
+
+            // function fDoesntExist() {
+            //     bFinishCheck = true;
+            // }
+
+            // let container = document.getElementById('imgCon');
+            // let imgArray2 = document.getElementsByClassName("images");
+            // console.log(imgArray2);
+
+            // for (let i = 0; i <= imgArray2.length; i++){
+            //     let newImg = document.createElement("img");
+            //     console.log(imgArray2[i]);
+            //     newImg.src = imgArray2[i].src;
+            //     container.append(newImg);
+            // }
+
+            // console.log(imgArray);
+        </script>
+    </body>
+</html>
