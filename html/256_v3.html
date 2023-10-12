@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>flashing</title>
+        <title>grid</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
@@ -16,30 +16,19 @@
                 box-sizing: border-box;
                 margin: 0px;
                 padding: 0px;
-                background-color: blue;
+                background-color: black;
             }
 
             img{
-                max-width: 75%;
-                max-height: 75%;
-                height: auto;
-                width: auto;
-                position: fixed;
+                height: 6.25vh;
+                width: 6.25vw;
+                position: relative;
+                object-fit: cover;
 
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                margin: 0;
+                cursor: default;
 
-                animation: show .1s;
-            }
-
-            @keyframes show{
-                from{
-                    display: block;
-                }
-                to{
-                    display: none;
-                }
+                filter: blur(0px);
             }
 
             /* img :nth-child(n+1){
@@ -50,22 +39,37 @@
                 width: 100vw;
                 height: 100vh;
             }
+
+            #nbr{
+                position: absolute;
+                z-index: 1000000;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 300px;
+                color: yellow;
+                cursor: default;
+                pointer-events: none;
+            }
+
+            @media only screen and (max-width: 600px) {
+                #nbr{
+                    font-size: 100px;
+                }
+            }
         </style>
     </head>
     <body>
-        <div id="big">
+        <div id="nbr">
+        </div>
 
+        <div id="big">
         </div>
         
         <script src="../js/airtable.browser.js"></script>
-        <script src="../js/index.js"></script>
+        <script src="../js/256_v3.js"></script>
         <script>
-            let scrollPos = 0;
-
-            document.addEventListener("scroll", event => {
-                scrollPos = window.scrollY;
-                console.log(scrollPos);
-            })
+            
         </script>
     </body>
 </html>

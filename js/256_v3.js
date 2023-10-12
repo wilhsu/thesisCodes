@@ -15,6 +15,29 @@ base('256').select({
 	    image.classList.add("img");
 	    image.src = record.get('Images')[0].url;
 	    document.querySelector("#big").append(image);
+
+        let num = record.get('Images')[0].filename;
+        let numDisplay = document.getElementById("nbr");
+
+        // let ctg = record.get('Category')[0];
+        // let ctgDisplay = document.getElementById("cat");
+
+
+        // numDisplay.style.display = "none";
+        
+        image.addEventListener(
+            "mouseenter",
+
+            (event) => {
+                // event.target.numDisplay.style.display = "block";
+                console.log(num);
+                numDisplay.innerHTML = num;
+                // ctgDisplay.innerHTML = ctg;
+                image.style.filter = "blur(10px)";
+            }
+
+
+        )
     });
 
     fetchNextPage();
