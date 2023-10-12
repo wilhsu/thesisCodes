@@ -10,18 +10,47 @@
         <title>home</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            #title{
+                animation: slide 10s ease-in infinite alternate;
+            }
+
+            @keyframes slide {
+                from {
+                    margin-left: 100%;
+                    width: 300%; 
+
+                    color: rgba(0, 0, 255, 0.25);
+                }
+
+                to {
+                    margin-left: 0%;
+                    width: 100%;
+
+                    color: blue;
+                }             
+            }
+        </style>
     </head>
     <body>
+        <span id="title">.this is my (william hsu's) page for my thesis codes.</span>
+            <br><br>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        256 images
+        <ol>
+            <li><a href="html/256_v1.html">256 images little city</a></li>
+            <li><a href="html/256_v2.html">256 images delay flashing</a></li>
+            <li><a href="html/256_v3.html">256 images blurred grid</a></li>
+        </ol>
+
+        Skin collection experiments
         <ol>
             <li><a href="html/skincollection1.html">skin collection experiment 1 (blurred grid)</a></li>
             <li><a href="html/skincollection2.html">skin collection experiment 2 (rainbow grid)</a></li>
             <li><a href="html/skincollection3.html">skin collection experiment 2</a></li>
-            <li><a href="html/256_v1.html">256 images little city</a></li>
-            <li><a href="html/256_v2.html">256 images delay flashing</a></li>
-            <li><a href="html/256_v3.html">256 images blurred grid</a></li>
+            
         </ol>
         
         <script src="" async defer></script>
