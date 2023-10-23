@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>preservation 1</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+            }
+
+            #container{
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                position: absolute;
+                width: 100vw;
+
+                font-size: 50px;
+                text-align: center;
+            }
+
+            #meButton{
+                font-size: 50px;
+                background-color: transparent;
+                border: none;
+                text-decoration: underline;
+                color: blue;
+                cursor: pointer;
+            }
+
+            #blank{
+                width: auto;
+                height: 100vh;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #options{
+                position: absolute;
+                justify-content: center;
+                width: 100vw;
+                animation: fadein 15s;
+            }
+
+            @keyframes fadein{
+                from{
+                    opacity: 0;
+                }to{
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <p>
+                would you miss <br><button id="meButton" onclick="imgChange();">me</button> if i died right now?
+            </p>
+            <div id="options">
+                <button>yes</button>
+                <button>no</button>
+            </div>
+        </div>
+        
+        <img id="blank">
+
+        
+        
+        <script>
+            function imgChange() {
+
+                var myImages1 = new Array();
+                    myImages1[1] = "../assets/disposable/1.png";
+                    myImages1[2] = "../assets/disposable/2.png";
+                    myImages1[3] = "../assets/disposable/3.png";
+                    myImages1[4] = "../assets/disposable/4.png";
+                    myImages1[5] = "../assets/disposable/5.png";
+                    myImages1[6] = "../assets/disposable/6.png";
+                    myImages1[7] = "../assets/disposable/7.png";
+                    myImages1[8] = "../assets/disposable/8.png";
+                    myImages1[9] = "../assets/disposable/9.png";
+                    myImages1[10] = "../assets/disposable/10.png";
+                    myImages1[11] = "../assets/disposable/11.png";
+
+                var rnd = Math.floor(Math.random() * myImages1.length);
+                    if (rnd == 0) {
+                            rnd = 1;
+                    }
+
+                document.getElementById("blank").src = myImages1[rnd];
+
+                }
+
+
+            // const words = ["died", "left", "disappeared", "vanished", "disintegrated", "expired", "departed", "ended", "perished", "deceased"];
+
+            // function generateString(length){
+            //     let result = ' ';
+            //     const wordsLength = words.length;
+            //     for (let i=0; i < length; i++){
+            //         result += words(Math.floor(Math.random() * wordsLength));
+            //     }
+
+            //     return result;
+
+            // }
+
+            // console.log(generateString(1));
+
+            // function textAppend(x){
+            //    let text = document.createElement('p');
+            //     text.innerHTML
+            // }
+        </script>
+    </body>
+</html>
